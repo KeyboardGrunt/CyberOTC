@@ -1,0 +1,23 @@
+title: Suspicious Use of Certutil to Download File
+id: 1fa1469a-e3c2-4c0c-b078-69d119b951cf
+description: Detects usage of certutil.exe with arguments suggesting a file download
+author: Tobias Thorén
+status: experimental
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 1
+    Image|endswith: '\certutil.exe'
+    CommandLine|contains:
+      - '-urlcache'
+      - '-split'
+  condition: selection
+fields:
+  - CommandLine
+  - ParentImage
+  - User
+falsepositives:
+  - Legitimate system diagnostics (rare)
+level: medium
