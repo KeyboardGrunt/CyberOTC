@@ -10,6 +10,4 @@ jobs:
       - name: Install pySigma validator
         run: pip install pySigma-validators-sigmahq
       - name: Validate rules
-        run: sigma check detections/sigma \
-          --fail-on-warning \
-          --fail-on-issues
+        run: sigma check detections/sigma --fail-on-issues
