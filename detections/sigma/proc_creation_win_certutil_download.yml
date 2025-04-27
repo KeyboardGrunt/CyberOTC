@@ -1,6 +1,7 @@
 title: Suspicious Use of Certutil to Download File
 id: 1fa1469a-e3c2-4c0c-b078-69d119b951cf
 description: Detects usage of certutil.exe with arguments suggesting a file download
+date: 2025-04-16
 author: Tobias Thorén
 status: experimental
 logsource:
@@ -21,3 +22,7 @@ fields:
 falsepositives:
   - Legitimate system diagnostics (rare)
 level: medium
+tags:
+  - attack.persistence
+  - attack.command-and-control
+  - attack.t1105
