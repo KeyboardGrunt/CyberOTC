@@ -1,3 +1,4 @@
+[![Sigma CI](https://github.com/KeyboardGrunt/CyberOTC/actions/workflows/sigma-ci.yml/badge.svg)](https://github.com/KeyboardGrunt/CyberOTC/actions/workflows/sigma-ci.yml)
 # CyberOTC
 Personal training documentation for posterity, portfolio, and perhaps minimal public value.
 
