@@ -1,5 +1,9 @@
 # CyberOTC
-Personal training documentation for posterity, portfolio, and minimal public value.
+Personal training documentation for posterity, portfolio, and perhaps minimal public value.
+
+This is a place where I show my work and progress over time as I train to become a stronger cyber security professional.
+
+In time this repo may even provide value to someone.
 
 ## Repo layout
 /detections/sigma/windows/<rules>.yml<br>
