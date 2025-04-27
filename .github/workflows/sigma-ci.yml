@@ -7,5 +7,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install pySigma
         run: pip install sigma-cli
+      - name: Install pySigma validator
+        run: pip install pySigma-validators-sigmahq
       - name: Validate rules
-        run: sigma validate detections/sigma --fail-on-warning
+        run: sigma check detections/sigma \
+          --fail-on-warning \
+          --fail-on-issues
