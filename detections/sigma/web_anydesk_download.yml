@@ -1,0 +1,40 @@
+title: New-Object Net WebClient Download - AnyDesk Based On Fog
+id: fbec245f-bfd8-4f22-969c-47b25e6a57ec
+status: experimental
+description: |
+  Downloading AnyDesk as seen in Fog group's any.ps1 powershell script which uses new-object System.Net.WebClient to
+  download AnyDesk for persistence.
+references:
+  - https://thedfirreport.com/2025/04/28/navigating-through-the-fog/
+author: Tobias Thoren
+date: 2025-04-30
+tags:
+  - attack.t1133
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  proc_creation:
+    EventID:
+      - 1       # Sysmon
+      - 4688    # Security
+    CommandLine|contains|all:
+      - 'new-object'
+      - 'system.net.webclient'
+    CommandLine|contains:
+      - 'anydesk'
+      - 'anydesk.exe'
+
+  ps_scriptblock:
+    EventID: 4104
+    ScriptBlockText|contains|all:
+      - 'new-object'
+      - 'system.net.webclient'
+    ScriptBlockText|contains:
+      - 'anydesk'
+      - 'anydesk.exe'
+
+  condition: proc_creation or ps_scriptblock
+falsepositives:
+  - Legitimate help-desk install of AnyDesk via scripted deployment
+level: high
