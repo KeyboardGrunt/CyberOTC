@@ -1,10 +1,8 @@
 [![Sigma CI](https://github.com/KeyboardGrunt/CyberOTC/actions/workflows/sigma-ci.yml/badge.svg)](https://github.com/KeyboardGrunt/CyberOTC/actions/workflows/sigma-ci.yml)
 # CyberOTC
-Personal training documentation for posterity, portfolio, and perhaps minimal public value.
+Personal training documentation for posterity and portfolio.
 
-This is a place where I show my work and progress over time as I train to become a stronger cyber security professional.
-
-In time this repo may even provide value to someone.
+Detection engineering, threat hunting, cyber threat intelligence.
 
 ## Repo layout
 /detections/sigma/<rules>.yml<br>
