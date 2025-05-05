@@ -1,8 +1,8 @@
-title: Suspicious DLL Load From User-Writable Location
-id: 48427e51-b21b-4728-94ff-4f69c935ab0a
+title: Suspicious DLL Load From Suspicious User-Writable Location
+id: a6d69d38-f928-4a98-89d8-a3967cf506ad
 status: experimental
 description: Detects DLLs being loaded from locations where legitimate DLLs are unlikely to exist (e.g., Temp, Downloads), indicating potential DLL search order hijacking.
-author: Tobias Thorén
+author: Tobias Thoren
 date: 2025/04/16
 references:
   - https://attack.mitre.org/techniques/T1574/001/
